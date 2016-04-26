@@ -22,17 +22,17 @@ var Translator= (function(trans) {
 		year: "année"
 	}
 
-		trans.addFrench= function(englishWord, frenchWord) {
-			french[englishWord]= frenchWord;
-		};
-		trans.translateToFrench= function(input) {
-			var output=[];
-			for(var word of input) {
-				output.push(french[word]);
-			}
-			return output;
+	trans.addFrench= function(englishWord, frenchWord) {
+		french[englishWord]= frenchWord;
+	};
+	trans.translateToFrench= function(input) {
+		var output=[];
+		for(var word of input) {
+			output.push(french[word]);
 		}
-		return trans;
+		return output;
+	}
+	return trans;
 	}(Translator || {}));
 
 
