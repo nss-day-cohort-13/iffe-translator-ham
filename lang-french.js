@@ -1,4 +1,4 @@
-var Translator= (function() {
+var Translator= (function(trans) {
 	var french= {
 		a: "un",
 		an: "un",
@@ -21,16 +21,19 @@ var Translator= (function() {
 		wishes: "voeux",
 		year: "année"
 	}
-	return {
-		translateToFrench: function(input) {
+
+		trans.addFrench= function(englishWord, frenchWord) {
+			french[englishWord]= frenchWord;
+		};
+		trans.translateToFrench= function(input) {
 			var output=[];
 			for(var word of input) {
 				output.push(french[word]);
 			}
 			return output;
 		}
-	}
+		return trans;
+	}(Translator || {}));
 
 
-}());
 

@@ -31,4 +31,4 @@ var Translator = (function(trans) {
   }
 
   return trans;
-}(Translator));
+}(Translator || {}));
