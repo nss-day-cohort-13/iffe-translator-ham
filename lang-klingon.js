@@ -1,5 +1,3 @@
-var Translator = {};
-
 var Translator = (function(trans) {
   var lex = {
     "a": ".",
@@ -27,7 +25,7 @@ var Translator = (function(trans) {
   trans.translateToKlingon = function(input) {
     var output = [];
     for(var word of input) {
-      output.push(lex[word]);
+      output.push(lex[word.toLowerCase()]);
     }
     return output;
   }
