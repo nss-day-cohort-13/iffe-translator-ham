@@ -19,4 +19,12 @@ document.getElementById("translate-button")
 		}
 
 		textOutput.innerHTML = translationArray.join(" ");
+
+		window.speechSynthesis.speak(new SpeechSynthesisUtterance(""));
+		var msg = new SpeechSynthesisUtterance();
+		msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
+		msg.text = translationArray.join(" ");
+		speechSynthesis.speak(msg);
+
 	});
+window.speechSynthesis.getVoices();
