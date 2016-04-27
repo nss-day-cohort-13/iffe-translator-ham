@@ -1,6 +1,6 @@
 document.getElementById("translate-button")
 	.addEventListener("click", function(){
-    var baseFontFamily = "sans-serif";
+    var baseFontFamily = document.getElementsByTagName("body")[0].style.fontFamily;
 
 		var textInput = document.getElementById("input-text");
     var textOutput = document.getElementById("output-text");
