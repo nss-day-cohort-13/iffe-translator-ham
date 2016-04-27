@@ -1,3 +1,8 @@
+@font-face {
+  font-family: klingon;
+  src: url("Klingon-pIqaD-HaSta.ttf") format("truetype");
+}
+
 body {
 	margin: 0;
 	font-family: sans-serif;
