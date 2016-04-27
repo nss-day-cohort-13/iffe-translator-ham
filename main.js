@@ -1,22 +1,28 @@
 document.getElementById("translate-button")
 	.addEventListener("click", function(){
+    var baseFontFamily = "sans-serif";
+
 		var textInput = document.getElementById("input-text");
-		var textOutput = document.getElementById("output-text");
+    var textOutput = document.getElementById("output-text");
 		var languageSelect = document.getElementById("lang-select");
 
 		var userInputArray = textInput.value.split(" ");
-		var translationArray = [];
+		var translationString;
 		switch(languageSelect.value) {
 			case "lang-croatian":
-				translationArray = Translator.translateToCroatian(userInputArray);
-				break;
-			case "lang-french":
-				translationArray = Translator.translateToFrench(userInputArray);
-				break;
-			case "lang-klingon":
-				translationArray = Translator.translateToKlingon(userInputArray);
+				translationString = Translator.translateToCroatian(userInputArray).join(" ");
+        textOutput.style.fontFamily = baseFontFamily;
+        break;
+      case "lang-french":
+        translationString = Translator.translateToFrench(userInputArray).join(" ");
+        textOutput.style.fontFamily = baseFontFamily ;
+        break;
+      case "lang-klingon":
+        translationString = Translator.translateToKlingon(userInputArray).join(" ");
+        translationString = Translator.toKlingonAlphabet(translationString);
+        textOutput.style.fontFamily = "klingon";
 				break;
 		}
 
-		textOutput.innerHTML = translationArray.join(" ");
+		textOutput.innerHTML = translationString;
 	});
