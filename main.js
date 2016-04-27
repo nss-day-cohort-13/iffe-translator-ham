@@ -1,16 +1,16 @@
 document.getElementById("translate-button")
-	.addEventListener("click", function(){
+  .addEventListener("click", function(){
     var baseFontFamily = document.getElementsByTagName("body")[0].style.fontFamily;
 
-		var textInput = document.getElementById("input-text");
+    var textInput = document.getElementById("input-text");
     var textOutput = document.getElementById("output-text");
-		var languageSelect = document.getElementById("lang-select");
+    var languageSelect = document.getElementById("lang-select");
 
-		var userInputArray = textInput.value.split(" ");
-		var translationString;
-		switch(languageSelect.value) {
-			case "lang-croatian":
-				translationString = Translator.translateToCroatian(userInputArray).join(" ");
+    var userInputArray = textInput.value.split(" ");
+    var translationString;
+    switch(languageSelect.value) {
+      case "lang-croatian":
+        translationString = Translator.translateToCroatian(userInputArray).join(" ");
         textOutput.style.fontFamily = baseFontFamily;
         break;
       case "lang-french":
@@ -21,8 +21,8 @@ document.getElementById("translate-button")
         translationString = Translator.translateToKlingon(userInputArray).join(" ");
         translationString = Translator.toKlingonAlphabet(translationString);
         textOutput.style.fontFamily = "klingon";
-				break;
-		}
+        break;
+    }
 
-		textOutput.innerHTML = translationString;
-	});
+    textOutput.innerHTML = translationString;
+  });
