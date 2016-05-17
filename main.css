@@ -1,0 +1,60 @@
+@font-face {
+  font-family: klingon;
+  src: url("Klingon-pIqaD-HaSta.ttf") format("truetype");
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.contain {
+	max-width: 75%;
+	margin: auto;
+	padding: 1em;
+	min-height: 74.5vh;
+	border: 1px solid grey;
+	background-color: #709775;
+
+}
+
+#input-text,
+#output-text {
+  display: block;
+  height: 175px;
+	width: 100%;
+	font-size: 2em;
+	background-color: rgba(256, 256, 256, .5);
+	border: 1px solid grey;
+	margin: auto;
+	padding: 2px;
+	overflow: auto;
+
+}
+
+.title {
+	margin: 0;
+	padding-top: 1em;
+	text-align: center;
+	color: white;
+	background-color: #415D43;
+	letter-spacing: .2rem;
+}
+.top,
+.bottom {
+	margin: 2em auto;
+	width: 80%;
+}
+
+.top {
+	text-align: right;
+}
+
+footer {
+	margin: 0;
+	height: 70px;
+	text-align: center;
+	color:white;
+	background-color: #415D43;
+	letter-spacing: .2rem;
+}
